@@ -21,8 +21,9 @@ def generate_instruction(detections, image_width=640, image_height=480):
             obstacles_ahead.append(det['class'])
 
     if obstacles_ahead:
-        return f"Obstacle ahead: {', '.join(set(obstacles_ahead))}. Move left or right."
-
+        distances = [f"{det['class']} at {det['distance']} meters" for det in detections if det['class'] in obstacles_ahead]
+        return f"Obstacle ahead: {', '.join(distances)}. Move left or right."
+    
     # Check sides
     left_obstacles = [d['class'] for d in detections if d['bbox'][0] < center_x - center_threshold]
     right_obstacles = [d['class'] for d in detections if d['bbox'][2] > center_x + center_threshold]
