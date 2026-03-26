@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Navigation AI - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Blind Navigation AI</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/navigation">Navigation</a></li>
+                <li><a href="/settings">Settings</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="glass-card">
+                <h1>Welcome to Blind Navigation AI</h1>
+                <p>Helping visually impaired users navigate safely with real-time obstacle detection and audio instructions.</p>
+                <a href="/navigation" class="btn-primary">Start Navigation</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="glass-card">
+                <h2>How It Works</h2>
+                <p>1. Access your webcam for live video feed.</p>
+                <p>2. AI detects obstacles in real-time.</p>
+                <p>3. Receive audio instructions to navigate safely.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

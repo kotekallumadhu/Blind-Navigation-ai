@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Navigation AI - Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Blind Navigation AI</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/navigation">Navigation</a></li>
+                <li><a href="/settings">Settings</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="settings">
+            <div class="glass-card">
+                <h1>User Settings</h1>
+                <form id="settings-form">
+                    <label for="language">Language:</label>
+                    <select id="language" name="language">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="kn">Kannada</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ta">Tamil</option>
+                        <option value="te">Telugu</option>
+                        <option value="ml">Malayalam</option>
+                    </select>
+                    <label for="volume">Volume:</label>
+                    <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+                    <button type="submit" class="btn-primary">Save Settings</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+</body>
+</html>

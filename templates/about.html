@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Navigation AI - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Blind Navigation AI</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/navigation">Navigation</a></li>
+                <li><a href="/settings">Settings</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="glass-card">
+                <h1>About Blind Navigation AI</h1>
+                <p>This application is a web-based AI system that detects objects in images and provides instructions or guidance to users. It is designed to assist users in understanding their surroundings by identifying objects accurately and generating meaningful instructions.</p>
+                <p>The system is built with Flask for the web interface, YOLOv8 for real-time object detection, and Python libraries for AI processing. Users can upload images, receive detailed detection results, and customize settings like language and volume for a personalized experience.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
