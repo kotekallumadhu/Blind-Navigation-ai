@@ -8,8 +8,5 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "app.py" }
-  ],
-  "pip": {
-    "extra-index-url": "https://download.pytorch.org/whl/cpu"
-  }
+  ]
 }
