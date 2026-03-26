@@ -38,6 +38,8 @@ async function saveSettings(e) {
             body: JSON.stringify(data)
         });
         const result = await response.json();
+        localStorage.setItem("language", data.language);
+        localStorage.setItem("volume", data.volume);
         alert('Settings saved!');
     } catch (err) {
         console.error('Error saving settings:', err);

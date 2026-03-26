@@ -4,6 +4,7 @@ import os
 from models.object_detection import detect_objects
 from utils.instruction_generator import generate_instruction
 
+
 app = Flask(__name__)
 app.config.from_object('config.Config')
 
